@@ -1,5 +1,14 @@
+#Try out the Model
+- [[Model Website](https://www.mdpi.com/2306-5729/7/11/146](https://advanced-obese-refrigerator.anvil.app/?fbclid=IwY2xjawOQ0tBleHRuA2FlbQIxMABicmlkETFIWVJacFlwZGt5cGd2elNUc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHsUW0FDrK0qi9xh3FMG-UNXwEj-lwesLX_Dak5PaxnuG4M613XSGJbR2vw3a_aem_ySZokTHIOhAW-xYNH6KNnw)
+
 # Predicting Student Dropout and Academic Success 🌐
 Linear Regression Model to predict student dropout rate.
+
+Outline:
+
+[Data Visualization and Findings](#data-processing)
+
+[Model Training and Evaluation](#model-training)
 
 Resources Used:
 - [MDPI Article](https://www.mdpi.com/2306-5729/7/11/146)
@@ -13,8 +22,8 @@ Qualification for scholarships in universities has to undergo criteria for the a
 # - What is the business goal? 
 This is significant to many universities, especially school administrators for scholarships, as they provide countless scholarship programs that depend on financial eligibility and academic performance. As scholarship programs are not given to every student who applies, we need to learn and predict students' backgrounds to effectively consider when looking out for higher-education scholarships. Scholarships are also considered to be an investment in a person's educational attainment, and if it can be predicted that a student could drop out from the program, discernment on their scholarship package can be adjusted.
 
-# ML  used?:  
-Given the supervised & structured nature of the dataset—that is, containing more than two class labels (i.e., “Graduate,” “Dropout,” and “Enrolled”)—multi-class classification should be used by the machine learning project to predict. Under this type of machine, we will be doing regression to predict the continuous value for our labels.
+# - Business Metric 
+The continuous data that will be collated to estimate the student's overall performance will be the credited curricular units and enrolled curricular units. Gathering the metric will look through their first-semester academic performance to generally get an insight into their grades to predict for the future. This will be done with a large dataset of students and compare all categorical labels toward performance.
 
 
 # Data processing
@@ -85,6 +94,23 @@ strongest in features in the same groups, such as “Nationality” and “Inter
 This descriptor presents a dataset created from the Polytechnic Institute of Portalegre (acquired from several disjoint databases) related to students enrolled in different undergraduate degrees, such as agronomy, design, education, nursing, journalism, management, social service, and technologies. It contains 4424 records with 35 attributes that include information known at the time of student enrollment, demographics, socioeconomics, macroeconomics data, and students’ academic performance at the end of the first and second semesters.
 The dataset is useful for researchers who want to conduct comparative studies on student academic performance and also for training in the machine learning area.
 
+# Model Training
 
+📺 - [Model Demonstration]([https://www.mdpi.com/2306-5729/7/11/146](https://www.youtube.com/watch?v=E9MJ1UI__T8))
 
+Method
 
+# ML  used?:  
+Given the supervised & structured nature of the dataset—that is, containing more than two class labels (i.e., “Graduate,” “Dropout,” and “Enrolled”)—multi-class classification should be used by the machine learning project to predict. Under this type of machine, we will be doing regression to predict the continuous value for our labels.
+
+- for our algorithm we used the random forest classifier as it can solve for regression or classification problems
+- percentage of data for training 80%, 10% for validation and 10% for testing
+
+# evaluation Metric
+After checking the evaluation there might be a need to reconsider enrolled as a possible target as its prediction rate is lower than other targets.
+
+for our chosen metric we covered the precision-recall (PR) AUC curve. 
+
+![Alt text](assets/confusionmatrix.png)
+
+![Alt text](assets/threshold-targe.png)
